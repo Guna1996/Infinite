@@ -1,10 +1,3 @@
-var container = document.querySelector(".container");
-var data = fetch("https://jsonplaceholder.typicode.com/posts")
-    .then(function (response) { return response.json(); })
-    .then(function (data) {
-    //infiniteScroll(data, count, contianer, div, dataobject, type )
-    infiniteScroll(data, 12, container, ["div", "division-style"], "title", "text");
-});
 function infiniteScroll(data, count, container, elementType, objectName, appendType) {
     var index = 0;
     window.addEventListener("scroll", function () {
